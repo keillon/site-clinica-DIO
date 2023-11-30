@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 99;    
+
+}
+
+.logo {
+
+    width: 300px;
+    height: 100px;  
+    display: flex;
+    justify-content: left;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+    font-size: 1em;
+    color: white;
+    text-decoration: none; 
+    font-weight: 500;
+    margin-left: 15px;
+}
+.navigation :hover{
+    color: #3333;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    background: #3333;
+    border-radius: 5px;
+    left: 0;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scale(1);
+    background-color: #3333;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    width: 160%;
+    height: 300%;
+}
+.sobre {
+    bottom: -95vh;
+    background-color: cornflowerblue;
+    position: absolute;
+    display: inline-block;
+    justify-content: center;
+    width: 12vh;
+    height: 3.5vh;
+    text-align: center;
+    color: white;
+    margin-left: center;
+    margin-right: center;
+   
+}
+
+.text{
+    top: 195vh;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    height: -200%;
+    background: cornflowerblue;
+    padding: 10px;
+}
+
+table{
+    width: 100vh;
+    border: 1px solid #ccc;
+}
+.tab {
+    align-items: center;
+    bottom: 40%;
+    left: 25%;
+    position: absolute;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+    line-height:2;
+    font-weight: 400;
+    vertical-align: middle;
+    white-space: nowrap; 
+    backdrop-filter: blur(10px);
+}
+        
+table thead th{
+    background-color: #333;
+    color: white;
+   }
+table tfoot td{
+    background-color: #3333;
+   }
+table tbody tr:nth-child(even) td{
+    background-color: #3333;
+   }
+table tbody tr:hover td{
+    background-color: #333;
+    cursor: pointer;
+   }
+
+.rodape{
+    font-size: 1.2em;
+    color: white;
+    bottom: 1000px;
+    left: 0;
+    width: 140%;
+    bottom: -235%;
+    position: absolute;
+    padding: 20px 100px;
+    background: cornflowerblue;
+    justify-content: space-between;
+    z-index: 99;
+    min-height: 150px;
+    
+   
+}
+
+.loginBtn{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transform: 0.5s;
+}
+.loginBtn ::hover {
+    background-color: white;
+    color: #333;
+    
+}
+
+.wrapper {
+    top: 160px;
+    left: 450px;
+    bottom: -60vh;
+    position: absolute;
+    width: 550px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: cornflowerblue;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box{
+    width: 60%;
+    padding: 1px;
+}
+
+.form-box h4{
+    font-size: 5em;
+    color: cornflowerblue;
+    text-align: right;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 2px solid cornflowerblue;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -18px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+}
+
+.btnLogin{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 1px solid;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.btnLogin:hover{
+    background-color: cornflowerblue ;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    top: 300px;
+    position: absolute;
+}
